@@ -1,0 +1,60 @@
+{
+  "name": "@posquit0/omega",
+  "version": "0.0.1",
+  "description": "An expressive framework to write serverless application",
+  "license": "MIT",
+  "author": {
+    "name": "Byungjin Park",
+    "email": "posquit0.bj@gmail.com",
+    "url": "https://www.posquit0.com"
+  },
+  "contributors": [],
+  "homepage": "https://github.com/posquit0/omega#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/posquit0/omega.git"
+  },
+  "bugs": {
+    "url": "https://github.com/posquit0/omega/issues"
+  },
+  "keywords": [
+    "serverless",
+    "serverless-framework",
+    "serverless-application",
+    "aws-lambda",
+    "lambda",
+    "lambda-framework",
+    "nodejs",
+    "middleware"
+  ],
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "index.js",
+    "lib/"
+  ],
+  "main": "index",
+  "scripts": {
+    "test": "NODE_ENV=test jest --forceExit --verbose",
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage",
+    "lint": "eslint lib test",
+    "lint:lib": "eslint lib",
+    "lint:test": "eslint test"
+  },
+  "dependencies": {
+    "debug": "^3.1.0",
+    "koa-compose": "^4.0.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.0",
+    "eslint": "^4.18.2",
+    "eslint-config-omnious": "^0.4.0",
+    "jest": "^22.4.2",
+    "jest-junit": "^3.6.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
