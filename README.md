@@ -17,11 +17,11 @@
   <a href="https://coveralls.io/github/posquit0/omega">
     <img src="https://coveralls.io/repos/github/posquit0/omega/badge.svg" alt='Coverage Status' />
   </a>
-  <a href="https://badge.fury.io/js/omega">
-    <img alt="npm version" src="https://badge.fury.io/js/omega.svg" />
+  <a href="https://badge.fury.io/js/%40posquit0%2Fomega">
+    <img alt="npm version" src="https://badge.fury.io/js/%40posquit0%2Fomega.svg" />
   </a>
-  <a href="https://www.npmjs.com/package/omega">
-    <img alt="npm" src="https://img.shields.io/npm/dt/omega.svg" />
+  <a href="https://www.npmjs.com/package/%40posquit0%2Fomega">
+    <img alt="npm" src="https://img.shields.io/npm/dt/%40posquit0%2Fomega.svg" />
   </a>
   <a href="https://david-dm.org/posquit0/omega">
     <img alt="npm" src="https://img.shields.io/david/posquit0/omega.svg?style=flat-square" />
