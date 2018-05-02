@@ -1,0 +1,36 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      # Primary container
+      - image: circleci/node:8.9.4
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependencies-{{ .Branch }}-{{ checksum "yarn.lock" }}
+            - dependencies-{{ .Branch }}-
+            - dependencies-master-
+      - run:
+          name: Install Dependencies
+          command: yarn
+      - save_cache:
+          key: dependencies-{{ .Branch }}-{{ checksum "yarn.lock" }}
+          paths:
+            - ./node_modules
+      - run:
+          name: Lint and Test
+          command: |
+            mkdir -p ~/reports
+            yarn lint -- --format junit --output-file ~/reports/eslint.xml
+            yarn test:coverage --ci --coverageDirectory ~/reports --testResultsProcessor jest-junit
+          environment:
+            JEST_JUNIT_OUTPUT: "~/reports/test-results.xml"
+      - run:
+          name: Upload Test Coverage to Coveralls
+          command: yarn run coveralls < ~/reports/lcov.info
+      - store_test_results:
+          path: ~/reports
+      - store_artifacts:
+          path: ~/reports
