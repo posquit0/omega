@@ -1,5 +1,7 @@
 'use strict';
 
+const { convertMapToObject } = require('../lib/utils');
+
 
 /**
  * Return middleware that translates the request and response from/to
@@ -15,7 +17,6 @@ function AwsProxyTranslator(options = {}) {
   } = options;
 
   // TODO: translate the request
-  // TODO: translate the response headers
   return async (ctx, next) => {
     ctx.headers = new Map();
 
@@ -24,6 +25,7 @@ function AwsProxyTranslator(options = {}) {
     const response = {
       isBase64Encoded,
       statusCode: ctx.status || 500,
+      headers: convertMapToObject(ctx.headers),
       body: JSON.stringify(ctx.body)
     };
     return response;
