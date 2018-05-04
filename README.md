@@ -53,7 +53,7 @@ $ yarn add @posquit0/omega
 
 ```node
 const Omega = require('@posquit0/omega');
-const AwsProxyTranslator = require('@posquit0/omega/translators/AwsProxyTranslator');
+const AwsProxyTranslator = require('@posquit0/omega/translators/aws-proxy-translator');
 
 
 const app = new Omega();

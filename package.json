@@ -1,6 +1,6 @@
 {
   "name": "@posquit0/omega",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "An expressive framework to write serverless application",
   "license": "MIT",
   "author": {
@@ -32,7 +32,8 @@
   },
   "files": [
     "index.js",
-    "lib/"
+    "lib/",
+    "translators/"
   ],
   "main": "index",
   "scripts": {
